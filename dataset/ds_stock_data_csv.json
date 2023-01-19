@@ -1,0 +1,80 @@
+{
+	"name": "ds_stock_data_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_covidreportingdls",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Test"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "data stock market.csv",
+				"folderPath": "stocks",
+				"fileSystem": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Symbol",
+				"type": "String"
+			},
+			{
+				"name": "Open",
+				"type": "String"
+			},
+			{
+				"name": "High",
+				"type": "String"
+			},
+			{
+				"name": "Low",
+				"type": "String"
+			},
+			{
+				"name": "Last Traded Price",
+				"type": "String"
+			},
+			{
+				"name": "Change",
+				"type": "String"
+			},
+			{
+				"name": "%Change",
+				"type": "String"
+			},
+			{
+				"name": "Traded Volume(lacs)",
+				"type": "String"
+			},
+			{
+				"name": "Traded Value(crs)",
+				"type": "String"
+			},
+			{
+				"name": "52 Week High",
+				"type": "String"
+			},
+			{
+				"name": "52 Week Low",
+				"type": "String"
+			},
+			{
+				"name": "365 Days % Change",
+				"type": "String"
+			},
+			{
+				"name": "30 Days % Change",
+				"type": "String"
+			}
+		]
+	}
+}
