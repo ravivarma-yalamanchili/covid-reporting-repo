@@ -13,7 +13,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "data stock market.csv",
+				"fileName": "*.csv",
 				"folderPath": "stocks",
 				"fileSystem": "raw"
 			},
