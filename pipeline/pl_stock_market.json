@@ -24,7 +24,7 @@
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings",
-							"skipLineCount": 10
+							"skipLineCount": 0
 						}
 					},
 					"sink": {
@@ -41,6 +41,164 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ULTRACEMCO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Symbol",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "7,280.00",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Open",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "7,389.00",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "High",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "7,262.85",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Low",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "7,376.00",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Last Traded Price",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "91.15",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Change",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "1.25",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "%Change",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "3.86",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Traded Volume(lacs)",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "283.41",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Traded Value(crs)",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "7,946.00",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "52 Week High",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "5,157.05",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "52 Week Low",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "-6.28",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "365 Days % Change",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "4.24",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "30 Days % Change",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
