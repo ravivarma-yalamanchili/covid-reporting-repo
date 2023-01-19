@@ -44,7 +44,7 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "ULTRACEMCO",
+									"name": "Symbol",
 									"type": "String",
 									"physicalType": "String"
 								},
@@ -56,7 +56,7 @@
 							},
 							{
 								"source": {
-									"name": "7,280.00",
+									"name": "Open",
 									"type": "String",
 									"physicalType": "String"
 								},
@@ -68,7 +68,7 @@
 							},
 							{
 								"source": {
-									"name": "7,389.00",
+									"name": "High",
 									"type": "String",
 									"physicalType": "String"
 								},
@@ -80,7 +80,7 @@
 							},
 							{
 								"source": {
-									"name": "7,262.85",
+									"name": "Low",
 									"type": "String",
 									"physicalType": "String"
 								},
@@ -92,7 +92,7 @@
 							},
 							{
 								"source": {
-									"name": "7,376.00",
+									"name": "Last Traded Price",
 									"type": "String",
 									"physicalType": "String"
 								},
@@ -104,7 +104,7 @@
 							},
 							{
 								"source": {
-									"name": "91.15",
+									"name": "Change",
 									"type": "String",
 									"physicalType": "String"
 								},
@@ -116,7 +116,7 @@
 							},
 							{
 								"source": {
-									"name": "1.25",
+									"name": "%Change",
 									"type": "String",
 									"physicalType": "String"
 								},
@@ -128,7 +128,7 @@
 							},
 							{
 								"source": {
-									"name": "3.86",
+									"name": "Traded Volume(lacs)",
 									"type": "String",
 									"physicalType": "String"
 								},
@@ -140,7 +140,7 @@
 							},
 							{
 								"source": {
-									"name": "283.41",
+									"name": "Traded Value(crs)",
 									"type": "String",
 									"physicalType": "String"
 								},
@@ -152,7 +152,7 @@
 							},
 							{
 								"source": {
-									"name": "7,946.00",
+									"name": "52 Week High",
 									"type": "String",
 									"physicalType": "String"
 								},
@@ -164,7 +164,7 @@
 							},
 							{
 								"source": {
-									"name": "5,157.05",
+									"name": "52 Week Low",
 									"type": "String",
 									"physicalType": "String"
 								},
@@ -176,7 +176,7 @@
 							},
 							{
 								"source": {
-									"name": "-6.28",
+									"name": "365 Days % Change",
 									"type": "String",
 									"physicalType": "String"
 								},
@@ -188,7 +188,7 @@
 							},
 							{
 								"source": {
-									"name": "4.24",
+									"name": "30 Days % Change",
 									"type": "String",
 									"physicalType": "String"
 								},
