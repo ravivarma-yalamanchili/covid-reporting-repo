@@ -23,13 +23,14 @@
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
+							"type": "DelimitedTextReadSettings",
+							"skipLineCount": 0
 						}
 					},
 					"sink": {
 						"type": "AzureSqlSink",
 						"preCopyScript": {
-							"value": "truncate table @{concat(pipeline().parameters.Schema,'.',pipeline().parameters.TableName)}",
+							"value": "@{concat('truncate table ',pipeline().parameters.Schema,'.',pipeline().parameters.TableName)}",
 							"type": "Expression"
 						},
 						"writeBehavior": "insert",
@@ -40,6 +41,164 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Symbol",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Symbol",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Open",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Open",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "High",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "High",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Low",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Low",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Last Traded Price",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Last Traded Price",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Change",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Change",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "%Change",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "%Change",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Traded Volume(lacs)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Traded Volume(lacs)",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Traded Value(crs)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Traded Value(crs)",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "52 Week High",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "52 Week High",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "52 Week Low",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "52 Week Low",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "365 Days % Change",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "365 Days % Change",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "30 Days % Change",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "30 Days % Change",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,

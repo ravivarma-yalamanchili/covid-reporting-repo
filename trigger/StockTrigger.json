@@ -3,7 +3,7 @@
 	"properties": {
 		"description": "trigger the stock copy activity when stock file is available",
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
