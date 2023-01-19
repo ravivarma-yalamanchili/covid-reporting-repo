@@ -1307,7 +1307,7 @@
 				],
 				"type": "BlobEventsTrigger",
 				"typeProperties": {
-					"blobPathBeginsWith": "/raw/blobs/stocks/data*",
+					"blobPathBeginsWith": "/raw/blobs/stocks/",
 					"ignoreEmptyBlobs": true,
 					"scope": "[parameters('StockTrigger_properties_typeProperties_scope')]",
 					"events": [
