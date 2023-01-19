@@ -9,6 +9,10 @@
 				"pipelineReference": {
 					"referenceName": "pl_stock_market",
 					"type": "PipelineReference"
+				},
+				"parameters": {
+					"TableName": "stockdata",
+					"Schema": "stock"
 				}
 			}
 		],
