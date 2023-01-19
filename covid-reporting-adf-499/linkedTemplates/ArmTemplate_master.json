@@ -27,6 +27,18 @@
 			"type": "string",
 			"defaultValue": "https://raw.githubusercontent.com"
 		},
+		"StockTrigger_properties_pl_stock_market_parameters_TableName": {
+			"type": "string",
+			"defaultValue": "stockdata"
+		},
+		"StockTrigger_properties_pl_stock_market_parameters_Schema": {
+			"type": "string",
+			"defaultValue": "stock"
+		},
+		"StockTrigger_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/95fe97d2-392b-4dc9-9831-ca3acc26eb05/resourceGroups/covidreporting-rg/providers/Microsoft.Storage/storageAccounts/datalakecovid"
+		},
 		"trigger_properties_event trigger_parameters_file": {
 			"type": "string",
 			"defaultValue": "@triggerBody().fileName"
@@ -100,6 +112,15 @@
 					},
 					"trigger_properties_typeProperties_scope": {
 						"value": "[parameters('trigger_properties_typeProperties_scope')]"
+					},
+					"StockTrigger_properties_pl_stock_market_parameters_TableName": {
+						"value": "[parameters('StockTrigger_properties_pl_stock_market_parameters_TableName')]"
+					},
+					"StockTrigger_properties_pl_stock_market_parameters_Schema": {
+						"value": "[parameters('StockTrigger_properties_pl_stock_market_parameters_Schema')]"
+					},
+					"StockTrigger_properties_typeProperties_scope": {
+						"value": "[parameters('StockTrigger_properties_typeProperties_scope')]"
 					}
 				}
 			},
