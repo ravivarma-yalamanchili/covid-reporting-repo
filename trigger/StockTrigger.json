@@ -18,7 +18,7 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/raw/blobs/stocks/data*",
+			"blobPathBeginsWith": "/raw/blobs/stocks/",
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/95fe97d2-392b-4dc9-9831-ca3acc26eb05/resourceGroups/covidreporting-rg/providers/Microsoft.Storage/storageAccounts/datalakecovid",
 			"events": [
