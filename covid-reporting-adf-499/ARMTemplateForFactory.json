@@ -493,7 +493,7 @@
 							"sink": {
 								"type": "AzureSqlSink",
 								"preCopyScript": {
-									"value": "truncate table @{concat(pipeline().parameters.Schema,'.',pipeline().parameters.TableName)}",
+									"value": "@{concat('truncate table ',pipeline().parameters.Schema,'.',pipeline().parameters.TableName)}",
 									"type": "Expression"
 								},
 								"writeBehavior": "insert",
