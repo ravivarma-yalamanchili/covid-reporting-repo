@@ -1,0 +1,29 @@
+{
+	"name": "StockTrigger",
+	"properties": {
+		"description": "trigger the stock copy activity when stock file is available",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_stock_market",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"TableName": "stockdata",
+					"Schema": "stock"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/raw/blobs/stocks/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/95fe97d2-392b-4dc9-9831-ca3acc26eb05/resourceGroups/covidreporting-rg/providers/Microsoft.Storage/storageAccounts/datalakecovid",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
