@@ -1,0 +1,27 @@
+{
+	"name": "trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "event trigger",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"file": "@triggerBody().fileName"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/raw/blobs/ecdc/cases/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/95fe97d2-392b-4dc9-9831-ca3acc26eb05/resourceGroups/covidreporting-rg/providers/Microsoft.Storage/storageAccounts/datalakecovid",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

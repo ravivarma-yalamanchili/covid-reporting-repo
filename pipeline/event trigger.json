@@ -1,0 +1,52 @@
+{
+	"name": "event trigger",
+	"properties": {
+		"activities": [
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "filename",
+					"value": {
+						"value": "@pipeline().parameters.file",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"file": {
+				"type": "string"
+			}
+		},
+		"variables": {
+			"filename": {
+				"type": "String"
+			}
+		},
+		"folder": {
+			"name": "Test"
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-01-18T09:49:41Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

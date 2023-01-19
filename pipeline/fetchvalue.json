@@ -1,0 +1,53 @@
+{
+	"name": "fetchvalue",
+	"properties": {
+		"activities": [
+			{
+				"name": "Script1",
+				"type": "Script",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase_covid",
+					"type": "LinkedServiceReference"
+				},
+				"typeProperties": {
+					"scripts": [
+						{
+							"type": "Query",
+							"text": {
+								"value": "SELECT *\n  FROM [SalesLT].[Customer] c\n  inner join SalesLT.CustomerAddress ca on c.CustomerID = ca.CustomerID\n  where c.FirstName = '@{variables('firstName')}'",
+								"type": "Expression"
+							}
+						}
+					],
+					"scriptBlockExecutionTimeout": "02:00:00"
+				}
+			}
+		],
+		"parameters": {
+			"CustomerID": {
+				"type": "string"
+			}
+		},
+		"variables": {
+			"firstName": {
+				"type": "String",
+				"defaultValue": "Catherine"
+			}
+		},
+		"folder": {
+			"name": "Test"
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-01-18T09:51:00Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

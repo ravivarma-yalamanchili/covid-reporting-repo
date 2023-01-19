@@ -1,0 +1,35 @@
+{
+	"name": "ds_transformed_file_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_covidreportingdls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"filepath": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "HospitalAdmission"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat('ecdc/',dataset().filepath)",
+					"type": "Expression"
+				},
+				"fileSystem": "processed"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

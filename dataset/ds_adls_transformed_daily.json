@@ -1,0 +1,27 @@
+{
+	"name": "ds_adls_transformed_daily",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_covidreportingdls",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "HospitalAdmission"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "ecdc/hospital_daily_file",
+				"fileSystem": "processed"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
