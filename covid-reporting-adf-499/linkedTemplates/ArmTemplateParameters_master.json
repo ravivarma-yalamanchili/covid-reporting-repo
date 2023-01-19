@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "covid-reporting-adf-499"
+		},
+		"AzureSqlDatabase_covid_connectionString": {
+			"value": ""
+		},
+		"ls_ablob_covidreportingsa_connectionString": {
+			"value": ""
+		},
+		"ls_adls_covidreportingdls_accountKey": {
+			"value": ""
+		},
+		"ls_adls_covidreportingdls_properties_typeProperties_url": {
+			"value": "https://datalakecovid.dfs.core.windows.net/"
+		},
+		"ls_https_cases_deaths_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com"
+		},
+		"trigger_properties_event trigger_parameters_file": {
+			"value": "@triggerBody().fileName"
+		},
+		"trigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/95fe97d2-392b-4dc9-9831-ca3acc26eb05/resourceGroups/covidreporting-rg/providers/Microsoft.Storage/storageAccounts/datalakecovid"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
